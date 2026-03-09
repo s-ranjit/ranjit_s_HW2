@@ -13,11 +13,44 @@
 </head>
 
 <body>
-    <div class="grid-con">
-        <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
-        <div id="counter-container2" class="counter col-span-full m-col-span-6"></div>
-        <div id="counterCon" class="counter col-span-full m-col-span-6"></div>
+    <h1 class="hidden">Counter</h1>
+    <div>
+        <section class="full-width-grid-con">
+            <h2 class="hidden">Main Navigation</h2>
+            <header id="main-header" class="full-width-grid-con">
+                <div id="logo" class="col-start-1 col-end-2">
+                    <img src="images/logo.svg" alt="Logo">
+                </div>
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" id="ham-burger">
+                    <img src="images/ham-burger-menu.svg" alt="Menu">
+                </label>
+                <div id="main-nav" class="m-col-start-5 m-col-end-13 l-col-end-12">
+                    <nav class="burger-con">
+                        <ul>
+                            <li><a href="index.html">Overview</a></li>
+                            <li><a href="#">Usage</a></li>
+                            <li><a href="#">Examples</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
     </div>
+    <main>
+        <section class="grid-con counter-intro">
+            <h2 class="col-span-full">What is Counter?</h2>
+            <p class="col-span-full">A counter component is a resuable piece of JavaScript that displays numeric value
+                and works with three
+                interactive buttons like increment, decrement and reset. </p>
+
+        </section>
+        <div class="grid-con">
+            <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
+            <div id="counter-container2" class="counter col-span-full m-col-span-6"></div>
+            <div id="counterCon" class="counter col-span-full m-col-span-6"></div>
+        </div>
+    </main>
 </body>
 
 </html>
