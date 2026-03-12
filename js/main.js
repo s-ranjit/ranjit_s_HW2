@@ -1,4 +1,4 @@
-import { Counter } from './counter.js';
+import { Counter } from './modules/counter.js';
 
 
 const container1 = new Counter("#counter-container1", 4); // this will be default number
