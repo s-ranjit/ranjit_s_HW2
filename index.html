@@ -28,7 +28,7 @@
                 <div id="main-nav" class="m-col-start-5 m-col-end-13 l-col-end-12">
                     <nav class="burger-con">
                         <ul>
-                            <li><a href="index.html">Overview</a></li>
+                            <li><a href="#overview">Overview</a></li>
                             <li><a href="#">Usage</a></li>
                             <li><a href="#">Examples</a></li>
                         </ul>
@@ -38,12 +38,27 @@
         </section>
     </div>
     <main>
-        <section class="grid-con counter-intro">
+        <article class="grid-con counter-intro" id="overview">
             <h2 class="col-span-full">What is Counter?</h2>
             <p class="col-span-full">A counter component is a resuable piece of JavaScript that displays numeric value
-                and works with three
-                interactive buttons like increment, decrement and reset. </p>
+                and allows users to work with three interactive buttons like increment, decrement and reset. </p>
+            <p class="col-span-full">It is designed using Object-Oriented Programming principles, where it includes
+                features like the count
+                never goes below zero and when
+                the value is zero, the Decrement and Reset buttons visually indicates that they are inactive.
+            </p>
+            <p class="col-span-full">It also has a stepcounter subclass that allows you to increment or decrement the
+                count by certain customized
+                value, demonstrating inheritance and polymorphism.
+            </p>
+        </article>
 
+        <section class="grid-con">
+            <h2 class="col-span-full">How to use it</h2>
+        </section>
+
+        <section class="grid-con">
+            <h2 class="col-span-full">Examples</h2>
         </section>
         <div class="grid-con">
             <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
@@ -52,6 +67,14 @@
             <div id="step-counter" class="counter col-span-full m-col-span-6"></div>
         </div>
     </main>
+
+    <footer class="full-width-grid-con footer">
+        <div class="col-span-full">
+            <div class="footer-txt">
+                <h3> &copy; Designed and Developed by Situ Ranjit</h3>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
