@@ -13,13 +13,14 @@ export class Counter {
         // add buttons, decrement, reset
         this.decrementBtn = document.createElement("button")
         // this.reset
-
+        this.resetBtn = document.createElement("button");
         // set button text
         this.button.textContent = "Increment";
         // set new button text
         // this.decrement...
         this.decrementBtn.textContent = "Decrement";
         // this.reset....
+        this.resetBtn.textContent = "Reset";
 
         // Append display and button into the container
         container.appendChild(this.display);
@@ -27,12 +28,15 @@ export class Counter {
         // append new buttons
         // container.appendChild
         container.appendChild(this.decrementBtn)
+        container.appendChild(this.resetBtn)
 
         // add Eventlistener
         this.button.addEventListener("click", () =>this.increment());
         // add new Eventlistener
 
         this.decrementBtn.addEventListener("click", () =>this.decrement());
+
+        this.resetBtn.addEventListener("click", () =>this.reset());
          // when this first gets mounted update the display
         this.update();
     }
@@ -60,6 +64,10 @@ export class Counter {
         // reset() {
         //     this.count = 0;
         // }
+        reset() {
+            this.count = 0;
+            this.update();
+        }
 
         
         update() {
@@ -69,8 +77,10 @@ export class Counter {
             // classList.toggle() this.count === 0
             if (this.count === 0) {
                 this.decrementBtn.classList.add("inactive");
+                this.resetBtn.classList.add("inactive");
             } else {
                 this.decrementBtn.classList.remove("inactive");
+                this.resetBtn.classList.remove("inactive");
             }
             }
         }
