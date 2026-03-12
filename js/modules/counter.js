@@ -1,6 +1,6 @@
 export class Counter {
-    constructor(selector) {
-        this.count = 0;
+    constructor(selector, initialValue = 0) {
+        this.count = initialValue;
         this.selector = selector;
         this.mount();
     }
@@ -45,12 +45,6 @@ export class Counter {
             this.update();
         }
 
-        // decrement() {
-        //     if statement needed
-        //         this.count--;
-        //         this.update();
-        // }
-
         decrement () {
             if (this.count > 0) {
                 this.count--;
@@ -58,9 +52,6 @@ export class Counter {
             }
         }
 
-        // reset() {
-        //     this.count = 0;
-        // }
         reset() {
             this.count = 0;
             this.update();
