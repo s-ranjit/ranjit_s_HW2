@@ -9,13 +9,15 @@ export class Counter {
         const container = document.querySelector(this.selector);
 
         this.display = document.createElement("div");
-        this.button = document.createElement("button");
+        this.incrementBtn = document.createElement("button");
         // add buttons, decrement, reset
         this.decrementBtn = document.createElement("button")
         // this.reset
         this.resetBtn = document.createElement("button");
         // set button text
-        this.button.textContent = "Increment";
+
+
+        this.incrementBtn.textContent = "Increment";
         // set new button text
         // this.decrement...
         this.decrementBtn.textContent = "Decrement";
@@ -24,18 +26,13 @@ export class Counter {
 
         // Append display and button into the container
         container.appendChild(this.display);
-        container.appendChild(this.button);
-        // append new buttons
-        // container.appendChild
+        container.appendChild(this.incrementBtn);
         container.appendChild(this.decrementBtn)
         container.appendChild(this.resetBtn)
 
-        // add Eventlistener
-        this.button.addEventListener("click", () =>this.increment());
-        // add new Eventlistener
-
+       
+        this.incrementBtn.addEventListener("click", () =>this.increment());
         this.decrementBtn.addEventListener("click", () =>this.decrement());
-
         this.resetBtn.addEventListener("click", () =>this.reset());
          // when this first gets mounted update the display
         this.update();
