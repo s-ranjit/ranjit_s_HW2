@@ -32,7 +32,7 @@ export class Counter {
         this.button.addEventListener("click", () =>this.increment());
         // add new Eventlistener
 
-        this.decrementBtn.addEventListener("click", () =>this.decrementBtn());
+        this.decrementBtn.addEventListener("click", () =>this.decrement());
          // when this first gets mounted update the display
         this.update();
     }
@@ -67,8 +67,14 @@ export class Counter {
             this.display.textContent = `Count: ${this.count}`;
 
             // classList.toggle() this.count === 0
+            if (this.count === 0) {
+                this.decrementBtn.classList.add("inactive");
+            } else {
+                this.decrementBtn.classList.remove("inactive");
+            }
+            }
         }
-}
+
 
 // counter is super classes
 // stepcounter is sub class
