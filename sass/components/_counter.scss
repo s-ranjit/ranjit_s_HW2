@@ -15,4 +15,10 @@
     background-color: cadetblue;
     color: #fff;
     letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .inactive {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
