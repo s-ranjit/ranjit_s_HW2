@@ -1,6 +1,6 @@
 export class Counter {
-    constructor(selector) {
-        this.count = 0;
+    constructor(selector, initialValue = 0) {
+        this.count = initialValue;
         this.selector = selector;
         this.mount();
     }
@@ -9,30 +9,31 @@ export class Counter {
         const container = document.querySelector(this.selector);
 
         this.display = document.createElement("div");
-        this.button = document.createElement("button");
+        this.incrementBtn = document.createElement("button");
         // add buttons, decrement, reset
         this.decrementBtn = document.createElement("button")
         // this.reset
-
+        this.resetBtn = document.createElement("button");
         // set button text
-        this.button.textContent = "Increment";
+
+
+        this.incrementBtn.textContent = "Increment";
         // set new button text
         // this.decrement...
         this.decrementBtn.textContent = "Decrement";
         // this.reset....
+        this.resetBtn.textContent = "Reset";
 
         // Append display and button into the container
         container.appendChild(this.display);
-        container.appendChild(this.button);
-        // append new buttons
-        // container.appendChild
+        container.appendChild(this.incrementBtn);
         container.appendChild(this.decrementBtn)
+        container.appendChild(this.resetBtn)
 
-        // add Eventlistener
-        this.button.addEventListener("click", () =>this.increment());
-        // add new Eventlistener
-
+       
+        this.incrementBtn.addEventListener("click", () =>this.increment());
         this.decrementBtn.addEventListener("click", () =>this.decrement());
+        this.resetBtn.addEventListener("click", () =>this.reset());
          // when this first gets mounted update the display
         this.update();
     }
@@ -44,12 +45,6 @@ export class Counter {
             this.update();
         }
 
-        // decrement() {
-        //     if statement needed
-        //         this.count--;
-        //         this.update();
-        // }
-
         decrement () {
             if (this.count > 0) {
                 this.count--;
@@ -57,9 +52,10 @@ export class Counter {
             }
         }
 
-        // reset() {
-        //     this.count = 0;
-        // }
+        reset() {
+            this.count = 0;
+            this.update();
+        }
 
         
         update() {
@@ -69,8 +65,10 @@ export class Counter {
             // classList.toggle() this.count === 0
             if (this.count === 0) {
                 this.decrementBtn.classList.add("inactive");
+                this.resetBtn.classList.add("inactive");
             } else {
                 this.decrementBtn.classList.remove("inactive");
+                this.resetBtn.classList.remove("inactive");
             }
             }
         }
@@ -79,10 +77,23 @@ export class Counter {
 // counter is super classes
 // stepcounter is sub class
 
-class StepCounter extends Counter {
+export class StepCounter extends Counter {
     constructor(selector, initialValue = 0, step = 1) {
         super(selector, initialValue);
         //add step property
-        //
+        this.step = step; 
     }
+     increment() {
+            this.count += this.step;
+            this.update();
+        }
+
+        decrement () {
+            if (this.count > 0) {
+                this.count--;
+                this.update();
+            }
+        }
+
+   
 }

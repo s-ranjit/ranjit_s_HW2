@@ -1,6 +1,7 @@
-import { Counter } from './counter.js';
+import { Counter, StepCounter } from './modules/counter.js';
 
 
-const container1 = new Counter("#counter-container1", 4); // this will be default number
-const container2 = new Counter("#counter-container2");
+const container1 = new Counter("#counter-container1"); 
+const container2 = new Counter("#counter-container2", 4); // this will be default number
 const newCounter = new Counter("#counterCon");
+const stepCounter = new StepCounter("#step-counter", 0, 5);
