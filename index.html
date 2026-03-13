@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="counter-favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="counter-favicon/apple-touch-icon.png" />
     <link rel="manifest" href="counter-favicon/site.webmanifest" />
-    <script type="module" defer src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
@@ -44,36 +44,69 @@
     </div>
     <main>
         <article class="grid-con counter-intro" id="overview">
-            <h2 class="col-span-full m-col-span-full l-col-span-full">What is Counter?</h2>
-            <p class="col-span-full m-col-span-full l-col-span-full">A counter component is a resuable piece of
-                JavaScript that displays numeric value
-                and allows users to work with three interactive buttons like increment, decrement and reset. </p>
-            <p class="col-span-full m-col-span-full l-col-span-full">It is designed using Object-Oriented Programming
-                principles, where it includes
-                features like the count
-                never goes below zero and when
-                the value is zero, the Decrement and Reset buttons visually indicates that they are inactive.
-            </p>
-            <p class="col-span-full m-col-span-full l-col-span-full">It also has a stepcounter subclass that allows you
-                to increment or decrement the
-                count by certain customized
-                value, demonstrating inheritance and polymorphism.
-            </p>
+            <div class="col-span-full m-col-span-full l-col-span-full">
+                <h2>Overview:</h2>
+                <h3>What the Counter class does</h3>
+                <p>The counter component is a resuable JavaScript components that displays numeric value and allows
+                    users to work with three interactive buttons like
+                    Increment, Decrement and Reset. </p>
+                <p>It is designed using Object-Oriented
+                    Programming principles, where it includes features like the count
+                    never goes below zero and when the value reaches zero, the Decrement and Reset buttons fades out
+                    which
+                    visually indicates that they are inactive.
+                </p>
+                <h4>What problem does it solves</h4>
+                <p>The Counter solves the problem of repeatedly creating similar
+                    counters without repeating code. Its subclass, StepCounter,extends the functionality by allowing the
+                    numeric value to increase or decrease showcasing inheritance and polymorphism.</p>
+            </div>
         </article>
 
         <section class="grid-con" id="usage">
-            <h2 class="col-span-full m-col-span-full l-col-span-full">How to use it</h2>
+            <div class="col-span-full m-col-span-full l-col-span-full">
+                <h2>How to use it:</h2>
+                <p>To get started, you need to create a container with an ID in your HTML where
+                    the counter will be displayed.</p>
+
+                <h3>Example HTML container</h3>
+                <pre>
+&lt;div id="counter-container"&gt;&lt;/div&gt;
+            </pre>
+                <p>Each counter should have its own ID since the JavaScript uses those ID's to
+                    connect
+                    with specific containers. When the JavaScript runs, the counter component starts displaying numeric
+                    value along with controlling buttons inside that container.
+                </p>
+
+                <h4>Example JavaScript instantiation</h4>
+                <div>
+                    import { Counter, StepCounter } from "./modules/counter.js";<br><br>
+
+                    const container1 = new Counter("#counter-container1");<br>
+                    const container2 = new Counter("#counter-container2", 4);<br>
+                    const newCounter = new Counter("#counterCon");<br>
+                    const stepCounter = new StepCounter("#step-counter", 0, 5);
+                </div>
+                <p class="js-example"> This example imports the Counter and StepCounter classes from counter.js and
+                    creates counters. Two
+                    counters increases at initial value 0, one of them increases from 4, meanwhile the step counter
+                    increases and decreases by 5, demonstrating inheritance and polymorphism.</p>
+
+                <h5>Explanation of Parameters</h5>
+            </div>
         </section>
 
         <section class="grid-con" id="examples">
-            <h2 class="col-span-full m-col-span-full l-col-span-full">Examples</h2>
-        </section>
-        <div class="grid-con">
+            <h2 class="col-span-full m-col-span-full l-col-span-full">Live Demo:</h2>
+            <p class="col-span-full">Here are some examples of Counter buttons. Try it yourself:</p>
+
+
             <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
             <div id="counter-container2" class="counter col-span-full m-col-span-6"></div>
             <div id="counterCon" class="counter col-span-full m-col-span-6"></div>
             <div id="step-counter" class="counter col-span-full m-col-span-6"></div>
-        </div>
+        </section>
     </main>
 
     <footer class="full-width-grid-con footer">
