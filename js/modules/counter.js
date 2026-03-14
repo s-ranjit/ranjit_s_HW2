@@ -62,18 +62,12 @@ export class Counter {
             // set initial display content
             this.display.textContent = `Count: ${this.count}`;
 
-            // classList.toggle() this.count === 0
-            if (this.count === 0) {
-                this.decrementBtn.classList.add("inactive");
-                this.resetBtn.classList.add("inactive");
-            } else {
-                this.decrementBtn.classList.remove("inactive");
-                this.resetBtn.classList.remove("inactive");
-            }
-            }
+             // classList.toggle() this.count === 0
+            this.decrementBtn.classList.toggle("inactive", this.count === 0);
+            this.resetBtn.classList.toggle("inactive", this.count === 0);
+
         }
-
-
+    }
 // counter is super classes
 // stepcounter is sub class
 
@@ -88,11 +82,13 @@ export class StepCounter extends Counter {
             this.update();
         }
 
-        decrement () {
-            if (this.count > 0) {
-                this.count--;
-                this.update();
-            }
+     decrement () {
+           
+           if (this.count > 0) {
+            this.count -= this.step;
+
+            this.update();
+           }
         }
 
    
