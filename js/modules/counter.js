@@ -10,18 +10,11 @@ export class Counter {
 
         this.display = document.createElement("div");
         this.incrementBtn = document.createElement("button");
-        // add buttons, decrement, reset
         this.decrementBtn = document.createElement("button")
-        // this.reset
         this.resetBtn = document.createElement("button");
-        // set button text
-
 
         this.incrementBtn.textContent = "Increment";
-        // set new button text
-        // this.decrement...
         this.decrementBtn.textContent = "Decrement";
-        // this.reset....
         this.resetBtn.textContent = "Reset";
 
         // Append display and button into the container
