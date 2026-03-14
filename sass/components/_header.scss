@@ -11,7 +11,7 @@
      justify-content: space-between;
      align-items: center;
      padding: 0 45px;
-     border-bottom: 1px solid pink;
+     border-bottom: 1px solid abstracts.$accent-color;
 
      #logo {
     width: 150px;
@@ -45,7 +45,7 @@
 }
 }
 #main-nav {
-  background-color: abstracts.$hamburger-bg-color;
+  background-color: abstracts.$secondary-color;
   width: 100%;
   height: 100%;
   text-align: center;

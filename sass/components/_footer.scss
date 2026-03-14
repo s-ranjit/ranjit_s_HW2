@@ -1,0 +1,13 @@
+@use '../abstracts';
+
+footer {
+    text-align: center;
+    background-color: abstracts.$secondary-color;
+    margin-top: 100px;
+    color: abstracts.$body-text-color;
+    padding: 40px;
+    
+    h3 {
+        font-weight: 200;
+    }
+}
