@@ -14,6 +14,10 @@
     <link rel="shortcut icon" href="counter-favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="counter-favicon/apple-touch-icon.png" />
     <link rel="manifest" href="counter-favicon/site.webmanifest" />
+    <!-- link to greensock main library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- link to greensock scroll trigger library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script type="module" src="js/main.js"></script>
 </head>
 
@@ -70,8 +74,8 @@
                     the counter will be displayed.</p>
 
                 <h3>Example HTML container</h3>
-                <pre>
-&lt;div id="counter-container"&gt;&lt;/div&gt;
+                <pre class="html-example">
+ &lt;div id="counter-container"&gt;&lt;/div&gt;
             </pre>
                 <p>Each counter should have its own ID since the JavaScript uses those ID's to
                     connect
@@ -80,7 +84,7 @@
                 </p>
 
                 <h4>Example JavaScript instantiation</h4>
-                <div>
+                <div class="js-code-example">
                     import { Counter, StepCounter } from "./modules/counter.js";<br><br>
 
                     const container1 = new Counter("#counter-container1");<br>

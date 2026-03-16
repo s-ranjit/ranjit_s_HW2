@@ -31,3 +31,9 @@
     cursor: not-allowed;
     background: abstracts.$inactive-btn;
   }
+  .html-example, .js-code-example{
+    background-color: rgb(223, 199, 142);
+    border-radius: 10px;
+    padding: 10px;
+     max-width: 500px;
+}
