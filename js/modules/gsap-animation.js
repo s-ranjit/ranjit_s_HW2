@@ -1,4 +1,4 @@
-export function gsapAnimation() {
+export function GsapAnimation() {
     gsap.registerPlugin(ScrollTrigger); 
     
     gsap.from("#logo", {
