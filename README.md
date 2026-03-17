@@ -31,7 +31,13 @@ This assignment focuses on reinforcing:
 - Reset button
 - Custom starting value
 - Prevents negative numbers
+- CSS applied to inactive decrement and reset buttons when it reaches 0
 - Multiple counters on the same page
+
+## StepCounter
+
+- Overrides increment() and decrement() methods to use step
+- Demonstrates inheritance and polymorphism
 
 ## 🎨SASS Workflow
 1. 🎛 Variables (colors, fonts, spacing)
